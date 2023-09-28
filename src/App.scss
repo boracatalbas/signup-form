@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "RobotoBold";
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #37384e;
+
+  .box {
+    display: grid;
+    grid-template-columns: 56% 44%;
+    border-radius: 30px;
+    background-color: white;
+    height: 70vh;
+    width: 50vw;
+    .left {
+      margin: 10vh 0 0 3vw;
+      display: grid;
+      grid-template-rows: 20% 10% 28% 18% 24%;
+      h1 {
+        font-size: 4rem;
+        font-family: "RobotoBold";
+      }
+      p {
+        font-family: "RobotoRegular";
+        margin-right: 6vw;
+      }
+      ul {
+        li {
+          font-family: "RobotoRegular";
+          display: flex;
+          margin-top: 1vh;
+          img {
+            padding-right: 1vw;
+          }
+        }
+      }
+      form {
+        label {
+          .wrap {
+            justify-content: space-between;
+            display: flex;
+            h2 {
+              margin-bottom: 1vh;
+              font-family: "RobotoRegular";
+              font-weight: bolder;
+              font-size: 0.8em;
+            }
+            .error-message {
+              position: relative;
+              left: 5.5vw;
+              font-family: "RobotoRegular";
+              color: red;
+              font-size: 0.8rem;
+            }
+          }
+          display: flex;
+          flex-direction: column;
+          margin-right: 3vw;
+
+          .errorBorder {
+            border: 2px solid red;
+            background-color: #ffe8e6;
+
+            &::placeholder {
+              color: #de7e77;
+            }
+          }
+          .border {
+            border: solid 1px gray;
+          }
+          input {
+            height: 52px;
+            border-radius: 10px;
+            border: solid 1px #dfdfdf;
+            padding-left: 1.5vw;
+            background-color: white;
+            font-size: 1.1rem;
+          }
+        }
+      }
+      .submitCheck {
+        background: linear-gradient(
+          147deg,
+          rgba(253, 84, 117, 1) 13%,
+          rgba(254, 148, 71, 1) 100%
+        );
+      }
+      button {
+        border: none;
+        border-radius: 10px;
+        margin-right: 3vw;
+        height: 58px;
+        background-color: #232741;
+        font-family: "RobotoRegular";
+        color: white;
+        font-size: 1rem;
+        &:hover {
+          box-shadow: 10px 10px 5px 0px rgba(255, 88, 105, 0.3);
+          transition: 0.5s;
+        }
+      }
+    }
+    .right {
+      margin-top: 2.5vh;
+      img {
+        height: 65vh;
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .App {
+    background-color: white;
+    .box {
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+
+      .left {
+        margin: 0 5vw;
+        order: 2;
+        display: grid;
+        grid-template-rows: 25% 20% 55% 30%;
+        position: relative;
+        bottom: 45vh;
+
+        h1 {
+          font-size: 3rem;
+        }
+        ul {
+          li {
+            margin-top: 3vh;
+          }
+          img {
+            margin-right: 3vw;
+          }
+        }
+      }
+      .right {
+        position: relative;
+        bottom: 34vh;
+        .desktopImg {
+          display: none;
+        }
+        order: 1;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 480px) {
+  .App {
+    .right {
+      .signUpMobile {
+        display: none;
+      }
+    }
+  }
+}
