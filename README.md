@@ -1,8 +1,8 @@
-Signup-form with using : 
--ReactJS
--React Router
--SASS
--FramerMotion
+Signup form with using 
+ReactJS,
+React Router,
+SASS,
+FramerMotion,
 and it has phone design between 320px and 480px
 
 ![p1](https://github.com/boracatalbas/signup-form/assets/98648040/fa536df6-b1de-46a6-9964-ff7fb0a4b22d)
